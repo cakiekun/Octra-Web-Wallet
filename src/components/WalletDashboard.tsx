@@ -301,6 +301,20 @@ export function WalletDashboard({
                                       <Trash2 className="h-3 w-3" />
                                     </Button>
                                   )}
+                                  {wallets.length > 1 && (
+                                    <Button
+                                      variant="ghost"
+                                      size="sm"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleRemoveWallet(w);
+                                      }}
+                                      className="h-6 w-6 p-0 text-red-500 hover:text-red-700"
+                                      title="Remove wallet"
+                                    >
+                                      <Trash2 className="h-3 w-3" />
+                                    </Button>
+                                  )}
                                 </div>
                               </div>
                             ))}
